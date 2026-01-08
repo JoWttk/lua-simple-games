@@ -13,10 +13,10 @@ function evitar(min, max)
   end
 end
 
-
 print("Você quer jogar")
 print("(1) = Jokenpo \n(2) = Impar-Par \n(3) = Jogo da Cobrinha")
 
+io.write("\n> ")
 local jogo = evitar(1, 3)
 
 local jogos = {
