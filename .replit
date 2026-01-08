@@ -1,0 +1,38 @@
+entrypoint = "main.lua"
+run = "lua main.lua"
+modules = ["lua-5.4"]
+
+[nix]
+channel = "stable-24_05"
+
+[languages.lua]
+pattern = "**/*.lua"
+
+[languages.lua.languageServer]
+start = ["lua-language-server"]
+
+[agent]
+expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run Game"
+
+[[workflows.workflow]]
+name = "Run Game"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "lua main.lua"
+
+[workflows.workflow.metadata]
+outputType = "console"
