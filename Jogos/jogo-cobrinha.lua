@@ -51,6 +51,7 @@ function Cobrinha()
 
         if nova.x < 1 or nova.x > largura or nova.y < 1 or nova.y > altura then
             print("Game Over!")
+             dofile("restart.lua")
             break
         end
 

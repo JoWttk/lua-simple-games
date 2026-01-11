@@ -36,6 +36,7 @@ function ImparOuPar()
     else
         print("\nA IA venceu!")
     end
+    dofile("restart.lua")
 end
 
 ImparOuPar()

@@ -8,16 +8,17 @@ function evitar(min, max)
         elseif numero < min or numero > max then
             print("Digite um número entre "..min.." e "..max)
         else
+            os.execute("clear")
             return numero
         end
     end
 end
 
 print("Você quer jogar")
-print("(1) = Jokenpo \n(2) = Impar-Par \n(3) = Jogo da Cobrinha \n(4) = Tetris")
+print("(1) = Jokenpo \n(2) = Impar-Par \n(3) = Jogo da Cobrinha \n(4) = Tetris\n(5) = RPG de Turnos\n(6) = Sair")
 
 io.write("\n> ")
-local jogo = evitar(1, 4)
+local jogo = evitar(1, 6)
 
 local jogos = {
     [1] = function()
@@ -31,6 +32,15 @@ local jogos = {
     end,
     [4] = function()
         dofile("Jogos/tetris.lua")
+    end,
+    [5] = function()
+        dofile("Jogos/rpg-turn.lua")
+    end,
+
+    
+    
+    [6] = function()
+        print("Obrigado por jogar!")
     end
 }
 

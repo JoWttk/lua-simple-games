@@ -2,17 +2,17 @@ function Jokenpo()
     math.randomseed(os.time())
 
     local escolhas = {
-    pedra = true,
-    papel = true,
-    tesoura = true
+        pedra = true,
+        papel = true,
+        tesoura = true
     }
 
     local lista = { "pedra", "papel", "tesoura" }
 
     local vence = {
-    pedra   = "tesoura",
-    tesoura = "papel",
-    papel   = "pedra"
+        pedra   = "tesoura",
+        tesoura = "papel",
+        papel   = "pedra"
     }
 
     while true do
@@ -29,9 +29,11 @@ function Jokenpo()
             print("Empate! Jogando novamente...")
         elseif vence[mao] == IA then
             print("Você ganhou!")
+            dofile("restart.lua")
             break
         else
             print("Você perdeu!")
+            dofile("restart.lua")
             break
         end
     end

@@ -151,6 +151,8 @@ function Tetris()
             py = 0
             if collision(px, py, shape) then
                 print("GAME OVER")
+                dofile("restart.lua")
+                
                 break
             end
         else
