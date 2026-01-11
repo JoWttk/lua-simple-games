@@ -75,8 +75,8 @@ while player.hp > 0 and enemy.hp > 0 do
 end
 
 if player.hp > 0 then
-    print("\n🏆 Você venceu!")
+    print("\nVocê venceu!")
 else
-    print("\n💀 Você foi derrotado!")
+    print("\nVocê foi derrotado!")
 end
 dofile("restart.lua")
