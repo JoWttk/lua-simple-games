@@ -141,7 +141,7 @@ function Tetris()
             local r = rotate(shape)
             if not collision(px, py, r) then shape = r end
         end
-        if input == "q" then break end
+        if input == "q" then dofile("restart.lua") break end
 
         if collision(px, py+1, shape) then
             fix(px, py, shape)
